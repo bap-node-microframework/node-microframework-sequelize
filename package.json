@@ -1,0 +1,16 @@
+{
+  "name": "bap-node-microframework-sequelize",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "build": "npm run tsc && find . -type f -depth 2 -name '*.ts' | xargs -I {} tsc {} typings/index.d.ts --declaration --module commonjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bap-node-microframework": "file:../node-microframework"
+  }
+}
