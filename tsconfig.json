@@ -34,12 +34,12 @@
     "files": [
         "src/index.d.ts",
         "src/index.ts",
-        "src/BaseControllerSequelize/BaseControllerSequelize.d.ts",
-        "src/BaseControllerSequelize/BaseControllerSequelize.ts",
-        "src/paramconverter/paramconverterSequelize.decorators.d.ts",
-        "src/paramconverter/paramconverterSequelize.decorators.ts",
-        "src/SequelizePlugin/SequelizePlugin.d.ts",
-        "src/SequelizePlugin/SequelizePlugin.ts",
+        "src/app/BaseControllerSequelize.d.ts",
+        "src/app/BaseControllerSequelize.ts",
+        "src/app/paramconverterSequelize.decorators.d.ts",
+        "src/app/paramconverterSequelize.decorators.ts",
+        "src/app/SequelizePlugin.d.ts",
+        "src/app/SequelizePlugin.ts",
         "typings/index.d.ts"
     ]
 }

@@ -2,9 +2,9 @@
 var Sequelize = require('sequelize');
 var core_1 = require('bap-node-microframework/core');
 var SequelizePlugin = (function () {
-    function SequelizePlugin(dns, debug) {
-        var sequelize = new Sequelize(dns, {
-            logging: (process.env.DEBUG || debug) ? console.log : false,
+    function SequelizePlugin(options) {
+        var sequelize = new Sequelize(options.dsn, {
+            logging: (process.env.DEBUG || options.debug) ? console.log : false,
             define: {
                 timestamps: false
             },
@@ -17,3 +17,4 @@ var SequelizePlugin = (function () {
     return SequelizePlugin;
 }());
 exports.SequelizePlugin = SequelizePlugin;
+//# sourceMappingURL=SequelizePlugin.js.map

@@ -7,7 +7,6 @@ function ParamConverterSequelize() {
     }
     var aName = getArgs[0];
     var options = getArgs[1];
-    var query = {};
     return function converter(target, name, descriptor) {
         var oldValue = descriptor.value;
         descriptor.value = function (req, res) {
@@ -37,3 +36,4 @@ function ParamConverterSequelize() {
     };
 }
 exports.ParamConverterSequelize = ParamConverterSequelize;
+//# sourceMappingURL=paramconverterSequelize.decorators.js.map

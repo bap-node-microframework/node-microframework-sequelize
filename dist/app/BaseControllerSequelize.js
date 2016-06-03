@@ -9,15 +9,11 @@ var BaseControllerSequelize = (function () {
         }
     };
     BaseControllerSequelize.prototype.cget = function (res, model) {
-        var getModel = core_1.Container.getModel(model);
-        getModel.findAll().then(function (data) { res.status(200).json(data); }, function (err) { res.status(404).json({ error: err }); });
+        core_1.Container.getModel(model).findAll().then(function (data) { res.status(200).json(data); }, function (err) { res.status(404).json({ error: err }); });
     };
     BaseControllerSequelize.prototype.post = function (model, form, request, response) {
-        var postModel;
-        var tmp = core_1.Container.getModel(model);
-        postModel = new tmp({});
         if (typeof model === "string") {
-            model = postModel;
+            model = core_1.Container.getModel(model).build();
         }
         BaseControllerSequelize.processForm(model, form, request, response);
     };

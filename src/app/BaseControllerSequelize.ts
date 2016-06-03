@@ -13,22 +13,15 @@ export abstract class BaseControllerSequelize {
     }
 
     cget(res: any, model: any) {
-        let getModel = Container.getModel(model);
-
-        getModel.findAll().then(
+        Container.getModel(model).findAll().then(
             (data) => { res.status(200).json(data) },
             (err) => { res.status(404).json({ error: err }); }
         );
     }
 
     post(model: any, form: any, request: any, response: any) {
-        let postModel;
-
-        let tmp = Container.getModel(model);
-        postModel = new tmp({});
-
         if (typeof model === "string") {
-            model = postModel;
+            model = Container.getModel(model).build();
         }
 
         BaseControllerSequelize.processForm(model, form, request, response);

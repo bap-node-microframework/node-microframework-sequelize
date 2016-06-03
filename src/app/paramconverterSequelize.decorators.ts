@@ -4,7 +4,6 @@ import { Container } from 'bap-node-microframework/core';
 export function ParamConverterSequelize(...getArgs) {
     let aName = getArgs[0];
     let options = getArgs[1];
-    let query = {};
 
     return function converter(target, name, descriptor) {
         let oldValue = descriptor.value;

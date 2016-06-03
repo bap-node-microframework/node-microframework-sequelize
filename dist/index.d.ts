@@ -1,3 +1,3 @@
-export * from './paramconverter/paramconverterSequelize.decorators';
-export * from './SequelizePlugin/SequelizePlugin';
-export * from './BaseControllerSequelize/BaseControllerSequelize';
+export * from './app/paramconverterSequelize.decorators';
+export * from './app/SequelizePlugin';
+export * from './app/BaseControllerSequelize';
