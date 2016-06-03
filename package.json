@@ -11,6 +11,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bap-node-microframework": "file:../node-microframework"
+    "bap-node-microframework": "git+https://github.com/bureaux-a-partager/node-microframework.git"
   }
 }
