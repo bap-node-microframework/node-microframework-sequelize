@@ -1,7 +1,14 @@
 "use strict";
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
 var core_1 = require('bap-node-microframework/core');
-var BaseControllerSequelize = (function () {
+var BaseControllerSequelize = (function (_super) {
+    __extends(BaseControllerSequelize, _super);
     function BaseControllerSequelize() {
+        _super.apply(this, arguments);
     }
     BaseControllerSequelize.prototype.get = function (res, model) {
         if (typeof model !== "string") {
@@ -45,6 +52,6 @@ var BaseControllerSequelize = (function () {
         object.destroy().then(function () { res.status(204).send(); }, function (err) { res.status(500).json({ error: err }); });
     };
     return BaseControllerSequelize;
-}());
+}(core_1.BaseController));
 exports.BaseControllerSequelize = BaseControllerSequelize;
 //# sourceMappingURL=BaseControllerSequelize.js.map
