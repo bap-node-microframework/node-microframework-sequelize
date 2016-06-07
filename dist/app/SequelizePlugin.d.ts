@@ -1,3 +1,7 @@
 export declare class SequelizePlugin {
-    constructor(options: any);
+    private instance;
+    private name;
+    constructor(container: any, options: any);
+    getInstance(): any;
+    getName(): String;
 }
