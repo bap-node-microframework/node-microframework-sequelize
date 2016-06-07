@@ -1,4 +1,5 @@
-export declare abstract class BaseControllerSequelize {
+import { BaseController } from 'bap-node-microframework/core';
+export declare abstract class BaseControllerSequelize extends BaseController {
     req: any;
     res: any;
     static router: any;

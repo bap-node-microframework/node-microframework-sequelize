@@ -1,6 +1,6 @@
-import { Container } from 'bap-node-microframework/core';
+import { Container, BaseController } from 'bap-node-microframework/core';
 
-export abstract class BaseControllerSequelize {
+export abstract class BaseControllerSequelize extends BaseController {
     req: any;
     res: any;
 
