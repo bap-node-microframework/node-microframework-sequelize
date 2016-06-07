@@ -16,11 +16,11 @@ var BaseControllerSequelize = (function (_super) {
         }
     };
     BaseControllerSequelize.prototype.cget = function (res, model) {
-        core_1.Container.getModel(model).findAll().then(function (data) { res.status(200).json(data); }, function (err) { res.status(404).json({ error: err }); });
+        core_1.Container.getApplicationInstance().getModel(model).findAll().then(function (data) { res.status(200).json(data); }, function (err) { res.status(404).json({ error: err }); });
     };
     BaseControllerSequelize.prototype.post = function (model, form, request, response) {
         if (typeof model === "string") {
-            model = core_1.Container.getModel(model).build();
+            model = core_1.Container.getApplicationInstance().getModel(model).build();
         }
         BaseControllerSequelize.processForm(model, form, request, response);
     };

@@ -13,7 +13,7 @@ export abstract class BaseControllerSequelize extends BaseController {
     }
 
     cget(res: any, model: any) {
-        Container.getModel(model).findAll().then(
+        Container.getApplicationInstance().getModel(model).findAll().then(
             (data) => { res.status(200).json(data) },
             (err) => { res.status(404).json({ error: err }); }
         );
@@ -21,7 +21,7 @@ export abstract class BaseControllerSequelize extends BaseController {
 
     post(model: any, form: any, request: any, response: any) {
         if (typeof model === "string") {
-            model = Container.getModel(model).build();
+            model = Container.getApplicationInstance().getModel(model).build();
         }
 
         BaseControllerSequelize.processForm(model, form, request, response);
