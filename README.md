@@ -26,11 +26,7 @@ var App = new Application(<ApplicationOptions>{
 
 ...
 
-let SequelizePluginInstance = new SequelizePlugin({ "dsn": "mysql://localhost:3306" });
-
-...
-
-App.registerPlugin(SequelizePluginInstance);
+App.registerPlugin(SequelizePlugin, { "dsn": "mysql://localhost:3306" });
 
 ...
 
