@@ -11,6 +11,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bap-node-microframework": "git+https://github.com/bap-node-microframework/node-microframework.git"
+    "bap-node-microframework": "^0.2.0"
   }
 }
